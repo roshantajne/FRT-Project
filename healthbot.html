@@ -1,0 +1,192 @@
+
+
+<! DOCTYPE html>
+  <head>
+	  <meta charset="UTF-8">
+	  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	  <title>Medical Helthcare Website</title>
+	 
+	  <!--css for mobile-->
+	  <link rel="stylesheet" href="style.css">
+	  
+	  <!--css for bootstrap-->
+	  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+	  
+	  <!--css for google font-->
+	  <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,400;1,300&family=Montserrat&family=Satisfy&display=swap" rel="stylesheet">
+	  
+	  
+	  <!--css for font-awesome-->
+	  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+		 
+    <!--favicon-->
+    <link rel="icon" type="image/x-icon" href="/images/logo.png">
+  </head>
+  
+  <body>
+    <div class="container ">
+      <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#"><img src="images/logo.png">AAROGYAM</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="fas fa-bars" id="icon"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto text-right">
+              <li class="nav-item">
+                <a class="nav-link active-home" href="index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="services.html">Services</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="healthbot.html">My-Health-Bot</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="disease.html">Diseases</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link btn-talk" href="#">Let’s Talk</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+
+    <!-- <div class="d-flex justify-content-center">
+        <div>
+        <h2>Welcome To My Health Bot<h2>
+            <p id="subtitle">Here you get deatails about various diseases </br>
+        and also ask for the preventions.
+        </p>
+      </div>
+    
+        <iframe id="chat" style="width: 500px; height: 500px; " class="mb-4"src=''></iframe>
+    
+    </div> -->
+    
+<!--Medical Specialities start-->
+<section class="">
+    <div class="container">
+  <h2 class="title">Welcome To My Health Bot</h2>
+  <p class="sub-title">Here you get details about various diseases </br>
+    and also ask for the preventions.</br>
+  <strong>To get started please Enter any disease you have or want details about.</strong></p>
+  <div class="d-flex justify-content-center">
+    <div class="col-md-8 shadow-lg">
+    <iframe id="chat" style="width: 100%; height: 350px; border: 3px;" class="mb-2 "src=''></iframe>
+    </div>
+   </div>
+ 
+  
+</section>
+      <!--Medical Specialities end-->
+
+     
+      
+      
+    
+       
+        
+
+        <script>
+
+            var xhr = new XMLHttpRequest();
+            xhr.open('GET', "https://webchat.botframework.com/api/tokens", true);
+            xhr.setRequestHeader('Authorization', 'BotConnector ' + 'lMmMaJPphNE.HG8wQwZr10vrwMYkywps4hqu9c3k80BesmX1frrwMQc');
+            xhr.send();
+            xhr.onreadystatechange = processRequest;
+        
+            function processRequest(e) {
+              if (xhr.readyState == 4  && xhr.status == 200) {
+                var response = JSON.parse(xhr.responseText);
+                document.getElementById("chat").src="https://webchat.botframework.com/embed/myhealthbot-mgmnus7?t="+response
+              }
+            }
+        
+          </script>
+	
+    <!--footer start-->
+	<section class="footer">
+		    <div class="container">
+			   <div class="row g-4">
+          <div class="col-md-4">
+            <a href="#" class="footer-logo"><img src="images/footer-logo.png">AAROGYAM</a>
+            <p>We have already served more<br>
+              than 3000+ patients also we have<br>
+              high range of success in the<br>
+              AAROGYAM or health care services.</p>
+              <div class="footer-icon">
+              <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+              <a href="#"><i class="fa-brands fa-instagram"></i></a>
+              <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+              <a href="#"><i class="fa-brands fa-twitter"></i></a>
+              </div>
+          </div>
+          <div class="col-md-2">
+            <h5>Hospital</h5>
+            <ul>
+              <li>
+                <a href="#">Doctor</a>
+              </li>
+              <li>
+                <a href="#">Consaltant</a>
+              </li>
+              <li>
+                <a href="#">Administration</a>
+              </li>
+              <li>
+                <a href="#">Establishment</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-md-2">
+            <h5>Quick Links</h5>
+            <ul>
+              <li>
+                <a href="services.html">Services</a>
+              </li>
+              <li>
+                <a href="#">Testimonials</a>
+              </li>
+              <li>
+                <a href="#">Departments</a>
+              </li>
+              <li>
+                <a href="#">References</a>
+              </li>
+              <li>
+                <a href="#">Tests</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-md-4">
+            <h5>Newsletter</h5>
+            <p class="newsletter-dec">By subscribing you will get<br>
+              attractive care from us.</p>
+              <input type="email" class="form-control" placeholder="Enter Your Email">
+              <input class="btn btn-warning submit" type="submit" value="Submit">
+
+          </div>
+         </div>
+         
+			  </div>
+    </section>
+    <section id="copyright">
+      <div class="container">
+        
+        <p><i class="fa-regular fa-copyright"></i> 2023 AAROGYAM, All Rights Reserved.</p>
+        
+      </div>
+    </section>			
+
+    <!--footer end-->
+    
+  
+  
+         <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  </body>
+</html>  
