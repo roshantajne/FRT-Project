@@ -5,7 +5,7 @@ Hello all, I am Roshan Pralhad Tajne from Government College of Engineering, Yav
 Health
 
 ### Project Title
-Aarogyam
+Aarogyam - A Hospital website with Health Bot
 
 ### Problem Statement/Opportunity
 These are days of uncertainity, due to the pandemic, there has been a great increase in no of patients and diseases. Many patients are not aware of the diseases, their symptoms and prevention measures must be taken to keep ourself safe. As we say precaution is better than cure we try to provides information about the diseases and it's sympotoms and also the preventive measures along with medical facilities. 
